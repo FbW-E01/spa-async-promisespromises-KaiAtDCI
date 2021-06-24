@@ -2,6 +2,14 @@
 import '../styles/main.scss';
 // Import any additional modules you want to include below \/
 
+function showModal() {
+    document.getElementById('myModal').style.display = 'flex';
+}
 
-// \/ All of your javascript should go here \/
+const delay = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve();
+    }, 2000);
+})
+delay.then(showModal)
 
