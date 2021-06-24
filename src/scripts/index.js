@@ -2,8 +2,14 @@
 import '../styles/main.scss';
 // Import any additional modules you want to include below \/
 
+const modalElement = document.getElementById('myModal');
+
 function showModal() {
-    document.getElementById('myModal').style.display = 'flex';
+    modalElement.style.display = 'flex';
+    modalElement.addEventListener('click', () => {
+        modalElement.style.display = 'none';
+        // remove event listener again?!
+    })
 }
 
 const delay = new Promise((resolve, reject) => {
